@@ -1,6 +1,6 @@
 {
   "name": "FrontendUnitTestLibrary",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "repository": "git@git.int.modac.eu:tebart/FrontendUnitTestLibrary.git",
   "author": "Andre Tebart <tebart@modell-aachen.de>",
