@@ -17,7 +17,6 @@
     "eslint": "^3.8.1",
     "eslint-loader": "^1.6.0",
     "eslint-plugin-html": "^2.0.1",
-    "frontend-unit-test-library": "git+ssh://git@git.int.modac.eu:tebart/FrontendUnitTestLibrary.git",
     "jasmine": "^2.5.2",
     "jasmine-ajax": "^3.2.0",
     "jquery": "^3.2.1",
