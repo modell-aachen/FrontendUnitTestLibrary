@@ -3,11 +3,6 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import './mocks/VueJSPlugin.js';
 
-Vue.use(Vuex);
-Vue.config.productionTip = false;
-
-let MockupStore = new Vuex.Store({});
-
 export default {
   vuexStore: new Vuex.Store({}),
   createVueComponent(componentDefinition, constructionOptions) {
