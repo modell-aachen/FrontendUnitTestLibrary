@@ -10,6 +10,8 @@ let MAVueJsPluginMock = {
 		Vue.component('vue-select', VueSelectMock);
 		Vue.component('vue-pagination', VuePaginationMock);
 
+		Vue.directive('tooltip', {});
+
 		//Global functions
 		Vue.registerStoreModule = (name, module) => {
 			options.store.registerModule(name, module);
@@ -30,6 +32,9 @@ let MAVueJsPluginMock = {
 		Vue.getConfigById = (id) => {
 			return JSON.parse($('.' + id).html());
 		};
+
+		Vue.foswiki = FoswikiMock;
+		Vue.moment = moment;
 
 		Vue.prototype.$store = options.store;
 		Vue.prototype.$foswiki = FoswikiMock;
