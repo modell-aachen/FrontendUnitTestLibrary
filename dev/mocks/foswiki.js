@@ -7,6 +7,12 @@ let foswiki = {
       return "MT:" + text;
     }
   },
+  getPreference(preference) {
+    return `Value of ${preference}`;
+  },
+  getPubUrl() {
+    return "http://wiki.de/pub";
+  },
   getScriptUrl: function() {
     return "SCRIPTURL";
   }
