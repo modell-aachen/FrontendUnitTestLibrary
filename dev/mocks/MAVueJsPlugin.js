@@ -33,6 +33,10 @@ let MAVueJsPluginMock = {
 			return JSON.parse($('.' + id).html());
 		};
 
+		Vue.makeAbsoluteUrl = (url) => {
+			return `Absolutised:${url}`;
+		};
+
 		Vue.foswiki = FoswikiMock;
 		Vue.moment = moment;
 

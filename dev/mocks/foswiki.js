@@ -14,7 +14,7 @@ let foswiki = {
     return "http://wiki.de/pub";
   },
   getScriptUrl: function() {
-    return "SCRIPTURL";
+    return "http://wiki.de/script";
   }
 };
 
