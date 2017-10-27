@@ -2,6 +2,7 @@ import VueSelectMock from './VueSelect.vue';
 import VuePaginationMock from './VuePagination.vue';
 import FoswikiMock from './foswiki.js';
 import moment from 'moment';
+import Base64 from 'js-base64';
 import $ from 'jquery';
 
 
@@ -29,8 +30,18 @@ let MAVueJsPluginMock = {
 			});
 		}
 
+		Vue.makeAbsoluteUrl = (url) => {
+			const absoluteBasePath = FoswikiMock.getScriptUrl().replace(/bin\/$/,'');
+			if(!url){
+				url = "";
+			}
+			url = url.replace(/^\//,'');
+			return `${absoluteBasePath}${url}`;
+		};
 		Vue.getConfigById = (id) => {
-			return JSON.parse($('.' + id).html());
+			let base64Config = $('.' + id).html();
+			let config = Base64.Base64.decode(base64Config);
+			return JSON.parse(config);
 		};
 
 		Vue.foswiki = FoswikiMock;
