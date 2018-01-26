@@ -31,12 +31,7 @@ let MAVueJsPluginMock = {
 		}
 
 		Vue.makeAbsoluteUrl = (url) => {
-			const absoluteBasePath = FoswikiMock.getScriptUrl().replace(/bin\/$/,'');
-			if(!url){
-				url = "";
-			}
-			url = url.replace(/^\//,'');
-			return `${absoluteBasePath}${url}`;
+                        return `Absolutides:${url}`;
 		};
 		Vue.getConfigById = (id) => {
 			let base64Config = $('.' + id).html();
